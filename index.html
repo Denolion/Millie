@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millicent ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUDIO -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+<audio id="voiceNote" src="voice.mp3"></audio>
+
+<!-- PAGE 1: Landing -->
+<section id="page1" class="page center">
+  <h1 class="glow">Millicent Cheptoo 💖</h1>
+  <h2>Will you be my Valentine?</h2>
+  <button id="yesBtn">YES 💘</button>
+  <button id="noBtn">NO 🙈</button>
+</section>
+
+<!-- PAGE 2: Why I Choose You -->
+<section id="page2" class="page center hidden">
+  <h2 class="glow">Why I Choose You 💌</h2>
+  <div id="whyText"></div>
+  <button onclick="nextPage(3)">Next ➡️</button>
+</section>
+
+<!-- PAGE 3: Memories (Pictures) -->
+<section id="page3" class="page center hidden">
+  <h2>📸 Our Memories</h2>
+  <div class="photos">
+    <img src="photos/pic1.jpg" alt="Memory 1">
+    <img src="photos/pic2.jpg" alt="Memory 2">
+    <img src="photos/pic3.jpg" alt="Memory 3">
+  </div>
+  <button onclick="nextPage(4)">Next ➡️</button>
+</section>
+
+<!-- PAGE 4: Hug Video -->
+<section id="page4" class="page center hidden">
+  <h2>🤗 Remember This Hug?</h2>
+  <video controls width="300">
+    <source src="hug.mp4" type="video/mp4">
+  </video>
+  <button onclick="nextPage(5)">Next ➡️</button>
+</section>
+
+<!-- PAGE 5: Voice Note -->
+<section id="page5" class="page center hidden">
+  <h2>🎤 A Message From My Heart</h2>
+  <button onclick="playVoice()">Play My Voice</button>
+  <button onclick="nextPage(6)">Next ➡️</button>
+</section>
+
+<!-- PAGE 6: Heart Hold -->
+<section id="page6" class="page center hidden">
+  <h2>Hold My Heart 🕯️</h2>
+  <div id="heart" class="heartbeat"
+       ontouchstart="holdHeart()" onmousedown="holdHeart()"
+       ontouchend="releaseHeart()" onmouseup="releaseHeart()">❤️</div>
+  <p id="heartMsg"></p>
+  <button onclick="nextPage(7)">Next ➡️</button>
+</section>
+
+<!-- PAGE 7: Map -->
+<section id="page7" class="page center hidden">
+  <h2>📍 Valentine Destination</h2>
+  <a href="https://maps.google.com/?q=Haven+Stay" target="_blank">Open Haven Stay 💕</a>
+  <button onclick="nextPage(8)">Next ➡️</button>
+</section>
+
+<!-- PAGE 8: Quiz -->
+<section id="page8" class="page center hidden">
+  <h2>💞 Little Love Quiz</h2>
+  <p>Who loves harder?</p>
+  <button onclick="quizAnswer()">You 😌</button>
+  <button onclick="quizAnswer()">Me ❤️</button>
+  <button onclick="nextPage(9)">Next ➡️</button>
+</section>
+
+<!-- PAGE 9: Counter -->
+<section id="page9" class="page center hidden">
+  <h2>⏳ Time Since You Said YES</h2>
+  <p id="timeCounter"></p>
+  <button onclick="nextPage(10)">Next ➡️</button>
+</section>
+
+<!-- PAGE 10: Ending Screen -->
+<section id="page10" class="page center hidden">
+  <h1 class="glow">I’m waiting for you ❤️</h1>
+  <p class="fade-in">
+    Not just for Valentine’s Day, but for every moment we share together.
+  </p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
